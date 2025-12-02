@@ -16,7 +16,7 @@ class Product extends Model
         'stock',
         'reserved',
         'sold',
-        
+        'meta',
     ];
 
     protected $casts = [
@@ -24,7 +24,7 @@ class Product extends Model
         'stock' => 'integer',
         'reserved' => 'integer',
         'sold' => 'integer',
-        
+        'meta' => 'array',
     ];
 
     // Relations

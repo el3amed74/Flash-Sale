@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\ProductResource;
 use App\Services\Contracts\ProductServiceInterface;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -28,7 +29,7 @@ class ProductController extends Controller
         return response()->json(
             [
                 'msg'=>'Product get successfully',
-                'product'=> $product
+                'product'=>  $product->toArray()
             ],Response::HTTP_OK);
     }
 }

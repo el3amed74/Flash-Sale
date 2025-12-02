@@ -20,13 +20,15 @@ class Hold extends Model
         'status',
         'expires_at',
         'used_at',
+        'idempotency_key',
+        'meta',
     ];
 
     protected $casts = [
         'qty' => 'integer',
         'expires_at' => 'datetime',
         'used_at' => 'datetime',
-        
+        'meta' => 'array',
     ];
 
     // Relations

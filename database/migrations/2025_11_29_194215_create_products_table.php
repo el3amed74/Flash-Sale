@@ -21,6 +21,7 @@ return new class extends Migration
             // dynamic counters
             $table->unsignedInteger('reserved')->default(0);
             $table->unsignedInteger('sold')->default(0);
+            $table->json('meta')->nullable();
 
             $table->timestamps();
 
