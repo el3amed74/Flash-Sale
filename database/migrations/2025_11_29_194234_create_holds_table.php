@@ -21,7 +21,9 @@ return new class extends Migration
             $table->enum('status', ['active', 'used', 'expired', 'cancelled'])->default('active');
             $table->timestamp('expires_at')->nullable();
             $table->timestamp('used_at')->nullable();
-            
+            $table->string('idempotency_key')->nullable()->index();
+            $table->json('meta')->nullable();
+
             $table->timestamps();
 
             $table->index(['status']);

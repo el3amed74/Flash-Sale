@@ -2,23 +2,24 @@
 
 namespace App\Providers;
 
-use App\Repositories\Contracts\HoldRepositoryInterface;
-use App\Repositories\Contracts\OrderRepositoryInterface;
-use App\Repositories\Contracts\PaymentWebhookLogRepositoryInterface;
-use App\Repositories\Contracts\ProductRepositoryInterface;
-use App\Repositories\HoldRepository;
-use App\Repositories\OrderRepository;
-use App\Repositories\PaymentWebhookLogRepository;
-use App\Repositories\ProductRepository;
-use App\Services\Contracts\HoldServiceInterface;
-use App\Services\Contracts\OrderServiceInterface;
-use App\Services\Contracts\PaymentWebhookServiceInterface;
-use App\Services\Contracts\ProductServiceInterface;
+
 use App\Services\HoldService;
 use App\Services\OrderService;
-use App\Services\PaymentWebhookService;
 use App\Services\ProductService;
+use App\Repositories\HoldRepository;
+use App\Repositories\OrderRepository;
+use App\Repositories\ProductRepository;
+use App\Services\PaymentWebhookService;
 use Illuminate\Support\ServiceProvider;
+use App\Services\Contracts\HoldServiceInterface;
+use App\Repositories\PaymentWebhookLogRepository;
+use App\Services\Contracts\OrderServiceInterface;
+use App\Services\Contracts\ProductServiceInterface;
+use App\Repositories\Contracts\HoldRepositoryInterface;
+use App\Repositories\Contracts\OrderRepositoryInterface;
+use App\Repositories\Contracts\ProductRepositoryInterface;
+use App\Services\Contracts\PaymentWebhookServiceInterface;
+use App\Repositories\Contracts\PaymentWebhookLogRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {

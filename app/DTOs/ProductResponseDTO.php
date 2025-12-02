@@ -13,6 +13,16 @@ readonly class ProductResponseDTO
     ) {
     }
 
+    public function toArray(): array
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'price' => $this->price,
+            'available_stock' => $this->availableStock,
+            'total_stock' => $this->totalStock,
+        ];
+    }
     
 }
 
